@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { PUBLIC_SUPABASE_ANON_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public';
 
   /** @type {import('svelte').Snippet} */
   const { children } = $props();
@@ -7,7 +8,7 @@
 
 <div class="flex">
   <nav class="col-span-2 hidden w-1/6 flex-none py-8 pl-6 lg:block">
-    <h1 class="text-lg font-semibold">Categories</h1>
+    <h1 class="text-lg font-semibold">Categories {PUBLIC_SUPABASE_ANON_KEY} - {PUBLIC_SUPABASE_URL}</h1>
     <ul>
       <li class="mt-2 text-sm text-gray-300">
         <a
